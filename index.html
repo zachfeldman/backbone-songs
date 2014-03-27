@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Backbone Sample
+    </title>
+    <script src="jquery.min.js"></script>
+    <script src="underscore.min.js"></script>
+    <script src="backbone.min.js"></script>
+    <script src="backbone.localStorage.min.js"></script>
+
+    <script type="text/template" id="song-show-template">
+      <%=song.get('title')%> by <%=song.get('artist')%>
+      <br>
+      <button id="edit">edit</button>
+    </script>
+
+    <script type="text/template" id="song-edit-template">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" value="<%=song.get('title')%>">
+      <label for="artist">Artist</label>
+      <input type="text" id="artist" name="artist" value="<%=song.get('artist')%>">
+      <button id="save">Save</button>
+    </script>
+
+    <script type="text/template" id="album-template">
+      <ul class="album">
+        <button id="add-song">+ Add A Song</button>
+      </ul>
+    </script>
+
+    <script src="backbone-playground.js"></script>
+  </head>
+  <body>
+    <div id="container">
+    </div>
+  </body>
+</html>
